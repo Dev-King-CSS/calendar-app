@@ -1,0 +1,139 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --yellow-red-gradient: linear-gradient(#ffc107, #e91e63);
+  --blue-green-gradient: linear-gradient(#2196f3, #31ff38);
+  --background: #161623;
+  --dark: #111;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  width: 25em;
+  height: 25em;
+  background-image: var(--yellow-red-gradient);
+  border-radius: 50%;
+  transform: translate(-15.625em, -7.5em);
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  width: 21.875em;
+  height: 21.875em;
+  background-image: var(--blue-green-gradient);
+  border-radius: 50%;
+  transform: translate(15.625em, 9.375em);
+}
+
+div.box {
+  position: relative;
+  z-index: 10;
+}
+
+div.container {
+  position: relative;
+  width: 25em;
+  min-height: 25em;
+  background: #fff1;
+  box-shadow: 0 1.5625em 2.8125em #0004;
+  border: 0.0625em solid #fff5;
+  border-right: 0.0625em solid #fff2;
+  border-bottom: 0.0625em solid #fff2;
+  backdrop-filter: blur(1.5625em);
+  border-radius: 0.625em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dycalendar {
+  width: 100%;
+  padding: 1.25em;
+}
+
+#dycalendar table {
+  width: 100%;
+  margin-top: 2em;
+  border-spacing: 0.3125em;
+}
+
+#dycalendar table tr:nth-child(1) td {
+  background-color: whitesmoke;
+  color: var(--dark);
+  border-radius: 0.25em;
+  font-weight: 600;
+}
+
+#dycalendar table td {
+  color: whitesmoke;
+  padding: 0.625em;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 200ms;
+}
+
+#dycalendar table td:hover {
+  background-color: #00ffffaa;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+  background-color: #00ffffaa;
+  color: #111 !important;
+  font-weight: 600;
+}
+
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.prev-btn,
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.next-btn {
+  background-color: whitesmoke;
+  color: #111;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.prev-btn {
+  left: 0.25em;
+}
+
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.next-btn {
+  right: 0.25em;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+  color: whitesmoke;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: default;
+}
